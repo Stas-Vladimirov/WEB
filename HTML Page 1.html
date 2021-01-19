@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<style>
+    .header-content 
+    {
+        display: flex;
+        justify-content: space-between; /* Элементы распределяются равномерно (первый элемент в начале строки, последний — в конце) */
+    }
+
+    .logo 
+    {
+        max-width: 70px;               /* Максимальная ширина страницы в пикселах. */
+        object-fit:cover;
+    }
+
+    .menu 
+    {
+        list-style-type: none;          /* Св-во, которое убирает точки. */
+        margin: 0;                      /*Внешний отступ*/
+        padding: 0;                     /*Внутренний отступ*/
+        display: flex;
+        align-items: center;            /*Элементы выравниваются по центру поперечной оси.*/
+    }
+
+    .menu li 
+    {
+        padding: 12px;  /* Устанавливает величину внутренних отступов элемента. */
+        font-size:23px; /* Высота текста */
+    }
+
+    .menu a
+    {
+        text-decoration:none; /* Убираем декорации из текста (подчёркивание)*/
+    }
+
+    .menu a:hover /*hover - определяет стиль элемента при наведении на него курсора мыши.*/
+    {
+         text-decoration:underline;
+    }
+
+    .intro 
+    {
+        background-image: url('images/im.jpg'); /*имя файла/имя картинки*/
+        /* background-image отвечает за показ картинки на фоне html тега*/
+        /*url - означает, что наша картинка лежит по адресу*/
+        height: 100vh;
+        background-repeat: no-repeat; /* Изображение не повторяется */
+        background-size: cover; /* Масштабируем фоновое изображение */
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .Click 
+    {
+        padding: 10px 15px;
+        font-size: 20px;      /* Высота текста */
+        border-radius: 10px;  /*радиус*/
+        border: none;
+        outline:none; /*при нажатии ничего не происходит*/
+        cursor:pointer;
+    }
+
+        .Click:hover /*hover - определяет стиль элемента при наведении на него курсора мыши.*/ 
+        {
+            cursor: pointer; /* Устанавливаем форму курсора */
+        }
+
+    .section-advantages 
+    {
+        padding: 10px 10%;  /* Устанавливаем отступ от внешней границы */
+                            /* сверху отступ 10px */
+                            /* слева и справа отступ 20% */
+        font-size:20px;
+    }
+    .advantages-list 
+    {
+        list-style-type: none; /* Св-во, которое убирает точки. */
+        position:relative;
+    }
+
+    .advantages-list li::before 
+    {
+        content:' ';
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        align-items:center;
+        background-image: url('images/check-mark.svg');
+        background-size:cover;
+        position:absolute;
+        top:5px;
+        left:23px;
+    }
+
+
+
+    .Russian_blue
+    {
+        display:flex;
+        justify-content:center;
+        
+    }
+    .cat_1
+    {
+        max-width:20%;
+        object-fit:cover;
+        margin-left:25px;
+    }
+    .description-Russian_blue 
+    {
+        list-style-type: none;
+        font-size: 20px;
+        text-align: justify; /*Выравнивание текста по ширине*/
+        margin-left: 30px;
+        margin-right: 60px;
+    }
+    .description-Minskin 
+    {
+        list-style-type: none;
+        font-size: 20px;
+        text-align: justify;
+        margin-left: -15px;
+        margin-right: 60px;
+    }
+    .cat_2 
+    {
+        max-width: 20%;
+        object-fit: cover;
+        margin-left: 25px;
+        margin-right:55px;
+    }
+    .Minskin 
+    {
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+    }
+    .logo-footer
+    {
+        max-width: 70px; /* Максимальная ширина страницы в пикселах. */
+        object-fit: cover;
+    }
+
+
+    .footer 
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .company-name 
+    {
+        list-style-type: none;
+        display: flex;
+        align-items: center; /*Элементы выравниваются по центру поперечной оси.*/
+        font-size: 20px;
+        margin-right:20px;
+    }
+</style>
+<header class = "heade">
+    <div class="header-content">
+        <img class="logo" src = "images/Logo.jpg" alt = "Logo" />
+        <ul class="menu">
+            <li class="menu-item"><a href="#">Photo</a></li>
+            <li class="menu-item"><a href="#">Video</a></li>
+            <li class="menu-item"><a href="#">News</a></li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div>
+        <section class="intro">
+            <button class="Click" type="button">Click me</button>   <!-- Тег <button> создает на веб-странице кнопки. -->
+        </section>
+    </div>
+    <div>
+        <section class="section-advantages">
+            <ul class="advantages-list">
+                <li class="menu-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li class="menu-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            </ul>
+        </section>
+    </div>
+    <div>
+        <section class="Description">
+            <div class="Russian_blue">
+                <img class="cat_1" src="images/cat_1.jpg" alt="Cat_1">
+                <ul class="description-Russian_blue">
+                    <li>История этой кошки начинается еще в VIII веке. В то далекое время эта порода кошек встречалась в северных частях Финляндии, России и Норвегии. Из-за великолепного красивого цвета мех русских голубых кошек северные народы использовали для пошива теплых перчаток и накидок. Но постепенно отношение к этим необыкновенным животным изменилось к лучшему. Они стали домашними любимцами русского народа, по славянским традициям этим кошкам доверялось хранить сон младенцев, отгоняя от них злых духов. Так на протяжении многих веков эти кошки жили вместе с людьми и считались обычными домашними животными. Лишь в 1901 году эта порода кошек получила официальное признание. А в 1912 году в Великобритании стали признавать русских голубых кошек как отдельную породу, называя их иностранными голубыми. Затем в 1930 году сформировалась ассоциация любителей русской голубой кошки. После Второй Мировой Войны представителей этой породы кошек практически не осталось. Только благодаря работе ценителей, используя оставшийся генетический материал и скрещивая эту породу с другими, удалось спасти русских голубых кошек от полного исчезновения. Восстановить полное соответствие голубых кошек первоначальным данным удалось спустя много лет, в 1972 году.</li>
+                </ul>
+            </div>
+            <div class="Minskin">
+                <ul class="description-Minskin">
+                    <li>Минксин - необычная порода кошек появилась совсем недавно и в квалификации TICA признана экспериментальной. Считается, что ее основателем является Пауль Максорлей. Ему принадлежит идея создания карликовой коротконогой кошки. В 1998 году он начал работу над созданием новой породы кошек, скрестив канадского сфинкса и манчкина. Затем к этим двум породам были добавлены девон-рекс и бурма. Селекционеры хотели создать миниатюрную коротколапую кошку с велюровой кожей как у сфинкса и мягкой вьющейся шерстью на пойнтах, как у рексов. Котенок, отвечающий всем вышеперечисленным требованиям появился спустя два года с начала работ, в 2000 году. Селекционные работы над совершенствованием данной породы проводится до сих пор. В 2012 году кошек - минскинов насчитывалось чуть больше 100. С 2008 года данная порода кошек допускается для участия в выставках.</li>
+                </ul>
+                <img class="cat_2" src="images/cat_2.jpg" alt="Cat_2">
+            </div>
+        </section>
+    </div>
+
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        <img class="logo-footer" src="images/Logo-footer.jpg" alt="" />
+    </div>
+    <ul class="company-name">
+        <li> Pethappy</li>
+    </ul>
+</footer>
+</html>
