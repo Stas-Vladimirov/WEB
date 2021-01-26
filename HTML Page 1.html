@@ -3,7 +3,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
     .header-content 
@@ -27,12 +28,12 @@
         align-items: center;            /*Элементы выравниваются по центру поперечной оси.*/
     }
 
-    .menu li 
-    {
-        padding: 12px;  /* Устанавливает величину внутренних отступов элемента. */
+    
+    .menu li{
+        padding:12px;  /* Устанавливает величину внутренних отступов элемента.*/
         font-size:23px; /* Высота текста */
     }
-
+    
     .menu a
     {
         text-decoration:none; /* Убираем декорации из текста (подчёркивание)*/
@@ -59,17 +60,25 @@
     .Click 
     {
         padding: 10px 15px;
-        font-size: 20px;      /* Высота текста */
+        font-size: 25px;      /* Высота текста */
         border-radius: 10px;  /*радиус*/
         border: none;
         outline:none; /*при нажатии ничего не происходит*/
         cursor:pointer;
     }
 
+    
+        @media screen and (min-width: 375px) and (max-width: 767px) {
+            .Click {
+                font-size: 50px;
+            }
+        }
+
         .Click:hover /*hover - определяет стиль элемента при наведении на него курсора мыши.*/ 
         {
             cursor: pointer; /* Устанавливаем форму курсора */
         }
+
 
     .section-advantages 
     {
@@ -120,6 +129,13 @@
         margin-left: 30px;
         margin-right: 60px;
     }
+
+     @media screen and (min-width: 375px) and (max-width: 767px) {
+            .description-Russian_blue {
+                font-size: 25px;
+            }
+        }
+
     .description-Minskin 
     {
         list-style-type: none;
